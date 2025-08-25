@@ -1,6 +1,11 @@
+import Payment.CardPayment;
+import Payment.PaymentMethod;
+import Payment.UPIPayment;
 
 public class Demo04 {
     public static void main(String[] args) {
-        System.out.println(new PaymentService().pay(new Payment("UPI", 499)));
+        PaymentMethod upi = new UPIPayment();
+        upi.pay(499.0);
+        // System.out.println(upi.pay(499.0));
     }
 }

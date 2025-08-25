@@ -1,4 +1,13 @@
+import Shipping.ShippingMethod;
+
 public class Shipment {
-    String type; double weightKg;
-    Shipment(String type, double w){ this.type=type; this.weightKg=w; }
+    ShippingMethod type;
+    double weightKg;
+    Shipment(ShippingMethod type, double w){ 
+        this.type=type; 
+        this.weightKg=w; 
+    }
+    public double shippingCalculator(){
+        return type.costCalculator(weightKg);
+    }
 }
